@@ -708,10 +708,7 @@ function displayMenuItems(menuItems) {
 
           `Category: ${item.category}\n` +
 
-          `Price: ₦${item.price}\n` +
-
-          `Description: ${item.desc}`
-
+          `Price: ₦${item.price}\n` 
         );
 
 

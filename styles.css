@@ -116,7 +116,6 @@ nav {
 }
 .nav-toggle:hover {
   color: #b47807;
-  transform: rotate(90deg);
 }
 .logo {
   height: 50px;
@@ -197,7 +196,10 @@ nav {
 
 
 .hero {
-  height: 90vh;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
     url(img/pexels-lucasandrade-19781592.jpg);
   background-size: cover;
@@ -207,13 +209,15 @@ nav {
 }
 
 .hero-content {
-  height: 100%;
+  width: 100%;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: #fff;
+  padding: 0 1rem;
 }
 
 .hero-content p {
@@ -306,6 +310,114 @@ nav {
   color: #00000094;
 }
 
+.home-menu {
+  padding: 3rem 2rem;
+  background: #fff;
+}
+
+.home-menu .title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.underline {
+  border-bottom: 2px solid #b47807;
+}
+
+.home-menu .title h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.home-menu .title p {
+  margin-top: 1rem;
+  color: #666;
+}
+
+.home-menu-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.home-menu-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.home-menu-item img {
+  width: 180px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.home-menu-info h3 {
+  margin: 0 0 0.5rem;
+}
+
+.home-menu-info p {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.home-menu-info span {
+  font-weight: bold;
+  color: #b47807;
+}
+
+.menu-link {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.menu-link a {
+  display: inline-block;
+  text-decoration: none;
+  background: #b47807;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  transition: 0.3s ease;
+}
+
+.menu-link a:hover {
+  background: #000;
+}
+
+@media screen and (max-width: 767px) {
+
+  .home-menu-container {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .home-menu-item {
+    gap: 1rem;
+  }
+
+  .home-menu-item img {
+    width: 120px;
+    height: 100px;
+  }
+
+  .home-menu-info h3 {
+    font-size: 1rem;
+  }
+
+  .home-menu-info p {
+    font-size: 0.85rem;
+  }
+
+}
+
 .custom-orders {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("img/pexels-prosper-buka-1289782307-28736731.jpg");
@@ -328,10 +440,12 @@ nav {
 .custom-orders textarea {
   width: 100%;
   max-width: 450px;
+  box-sizing: border-box;
   margin-bottom: 1rem;
   padding: 1.5rem;
   background: transparent;
   color: #fff;
+  font-size: 16px;
 }
 
 .custom-orders button {
@@ -552,10 +666,11 @@ Menu
   max-width: 25rem;
 }
 .photo {
+  width: 100%;
   object-fit: cover;
   height: 200px;
   border: 0.25rem solid var(--clr-gold);
-  border-radius: var(--radius);
+  border-radius: 6px;
 }
 .item-info header {
   display: flex;
