@@ -19,3 +19,27 @@ navToggle.addEventListener("click", function () {
   links.classList.toggle("show-links");
 });
 
+
+
+
+const customOrder = document.getElementById("customOrder");
+const submitOrder = document.getElementById("submitOrder");
+
+submitOrder.addEventListener("click", () => {
+  const order = customOrder.value.trim();
+
+  if (order === "") {
+    alert("Please enter your order.");
+    return;
+  }
+
+  const phoneNumber = "2349023306168";
+
+  const message = `Hello Stephs Bistro, I would like to make a custom order:
+
+  ${order}`;
+
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  window.open(whatsappURL, "_blank");
+});
