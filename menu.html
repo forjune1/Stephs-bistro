@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="preload"
+      as="image"
+      href="img/pexels-lucasandrade-19781592.jpg"
+      fetchpriority="high"
+    >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
     <title>Steph's Bistro</title>
@@ -83,6 +89,32 @@
         <div class="section-center"></div>
 
       </section>
+
+      
+      <!-- MULTIPLE FOOD ORDER SUMMARY -->
+      <section class="cart-section" id="cart-section" hidden>
+        <div class="cart-heading">
+          <h2>Your Order</h2>
+          <p>Review your selected meals before placing your order.</p>
+        </div>
+
+        <div id="cart-items"></div>
+
+        <div class="cart-total">
+          <h3>Total:</h3>
+          <h3 id="cart-total">₦0</h3>
+        </div>
+
+        <button type="button" id="clear-cart" class="clear-cart-btn">
+          Clear Order
+        </button>
+
+        <button type="button" id="place-all-orders" class="place-all-btn">
+          <i class="fa-brands fa-whatsapp"></i>
+          Place All Orders on WhatsApp
+        </button>
+      </section>
+
 
       
 

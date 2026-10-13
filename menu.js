@@ -4,7 +4,7 @@ const menu = [
     title: "Basmatic Smokey Jollof 1.5L",
     category: "Rice",
     price: 35000,
-    img: "./images/item-1.jpeg",
+    img: "img/IMG_6433.jpg",
     desc: `Aromatic basmati rice cooked in a rich tomato and pepper sauce with a delicious smoky flavor.`,
   },
   {
@@ -12,7 +12,7 @@ const menu = [
     title: "Basmatic Fried Rice 1.5L",
     category: "Rice",
     price: 35000,
-    img: "./images/item-1.jpeg",
+    img: "img/IMG_6434.jpg",
     desc: `Fragrant basmati fried rice tossed with colorful vegetables and savory seasonings for a flavorful meal.`,
   },
   {
@@ -85,7 +85,7 @@ const menu = [
     title: "Stir Fried Pasta 1.5L",
     category: "Pasta",
     price: 30000,
-    img: "./images/item-2.jpeg",
+    img: "img/IMG_6435.jpg",
     desc: `Pasta stir-fried with fresh vegetables, aromatic seasonings, and a savory sauce for a delicious meal.`,
   },
   {
@@ -93,7 +93,7 @@ const menu = [
     title: "Native Pasta 1.5L",
     category: "Pasta",
     price: 30000,
-    img: "./images/item-2.jpeg",
+    img: "img/IMG_6436.jpg",
     desc: `Pasta prepared with traditional local flavors, aromatic spices, and savory ingredients.`,
   },
   {
@@ -134,15 +134,15 @@ const menu = [
     title: "Abacha With Fried Fish 1.5L",
     category: "Dishes",
     price: 30000,
-    img: "./images/item-3.jpeg",
+    img: "img/IMG_6437.jpg",
     desc: `Traditional African salad made with cassava flakes, rich palm-oil dressing, spices, and crispy fried fish.`,
   },
   {
     id: 18,
-    title: "Abacha With Fried Fish 1.5L",
+    title: "Abacha With Fried Fish 2L",
     category: "Dishes",
     price: 35000,
-    img: "./images/item-3.jpeg",
+    img: "img/IMG_6437.jpg",
     desc: `Traditional African salad made with cassava flakes, rich palm-oil dressing, spices, and crispy fried fish.`,
   },
   {
@@ -207,7 +207,7 @@ const menu = [
     title: "Egusi Soup 2L",
     category: "Soup",
     price: 45000,
-    img: "./images/item-4.jpeg",
+    img: "img/signatureegusi.avif",
     desc: `A generous serving of rich Nigerian egusi soup made with melon seeds, vegetables, palm oil, and savory seasonings.`,
   },
   {
@@ -342,10 +342,10 @@ const menu = [
 
   {
     id: 43,
-    title: "Peppered Chicked",
+    title: "Peppered Chicken",
     category: "Protein",
     price: 5000,
-    img: "./images/item-5.jpeg",
+    img: "img/IMG_6438.jpg",
     desc: `Tender chicken seasoned with aromatic spices and tossed in a rich, spicy pepper sauce.`,
   },
   {
@@ -353,7 +353,7 @@ const menu = [
     title: "Peppered Turkey",
     category: "Protein",
     price: 7000,
-    img: "./images/item-5.jpeg",
+    img: "img/IMG_6439.jpg",
     desc: `Tender turkey pieces coated in a flavorful, spicy pepper sauce with aromatic Nigerian seasonings.`,
   },
   {
@@ -410,7 +410,7 @@ const menu = [
     title: "Chicken Pepper Soup 1.5L",
     category: "PepperSoup",
     price: 35000,
-    img: "./images/item-6.jpeg",
+    img: "img/IMG_6440.jpg",
     desc: `Spicy and aromatic Nigerian pepper soup prepared with tender chicken and traditional herbs and spices.`,
   },
   {
@@ -418,7 +418,7 @@ const menu = [
     title: "Catfish Pepper Soup 1.5L",
     category: "PepperSoup",
     price: 35000,
-    img: "./images/item-6.jpeg",
+    img: "img/IMG_6441.jpg",
     desc: `Flavorful catfish pepper soup made with tender catfish, fresh peppers, and aromatic Nigerian spices.`,
   },
   {
@@ -475,7 +475,7 @@ const menu = [
     title: "Chicken Stew 1.5L",
     category: "Stew",
     price: 30000,
-    img: "./images/item-7.jpeg",
+    img: "img/IMG_6442.jpg",
     desc: `Rich tomato-based stew prepared with tender chicken, peppers, tomatoes, and savory Nigerian seasonings.`,
   },
   {
@@ -483,7 +483,7 @@ const menu = [
     title: "Beef Stew 1.5L",
     category: "Stew",
     price: 30000,
-    img: "./images/item-7.jpeg",
+    img: "img/IMG_6443.jpg",
     desc: `Rich and flavorful tomato stew cooked with tender beef, peppers, tomatoes, and aromatic spices.`,
   },
   {
@@ -556,7 +556,7 @@ const menu = [
     title: "Garri",
     category: "Swallow",
     price: 400,
-    img: "./images/item-8.jpeg",
+    img: "img/IMG_6444.jpg",
     desc: `Smooth and refreshing garri prepared as a classic Nigerian swallow, perfect with soups and stews.`,
   },
   {
@@ -564,7 +564,7 @@ const menu = [
     title: "Semo",
     category: "Swallow",
     price: 400,
-    img: "./images/item-8.jpeg",
+    img: "img/IMG_6445.jpg",
     desc: `Soft and smooth semolina swallow, perfect for pairing with rich Nigerian soups and stews.`,
   },
   {
@@ -607,7 +607,7 @@ const btnContainer = document.querySelector(".btn-container");
 // becomes:
 // 2348139436706
 
-const VENDOR_WHATSAPP_NUMBER = "2349023306168";
+const VENDOR_WHATSAPP_NUMBER = "2347065427935";
 
 
 // =====================================================
@@ -624,46 +624,48 @@ window.addEventListener("DOMContentLoaded", function () {
 // DISPLAY MENU ITEMS
 // =====================================================
 
+
 function displayMenuItems(menuItems) {
+  if (!sectionCenter) return;
 
-  let displayMenu = menuItems
+  const displayMenu = menuItems
     .map(function (item) {
-
       return `
         <article class="menu-item">
-
-          <img 
-            src="${item.img}" 
-            alt="${item.title}" 
+          <img
+            src="${item.img}"
+            alt="${item.title}"
             class="photo"
           />
 
           <div class="item-info">
-
             <header>
-
               <h4>${item.title}</h4>
-
               <h4 class="price">
-                ₦${item.price}
+                ₦${Number(item.price).toLocaleString("en-NG")}
               </h4>
-
             </header>
 
-            <p class="item-text">
-              ${item.desc}
-            </p>
+            <p class="item-text">${item.desc}</p>
 
-            <button 
-              type="button" 
-              class="order-btn" 
-              data-id="${item.id}"
-            >
-              Order now
-            </button>
+            <div class="food-actions">
+              <button
+                type="button"
+                class="order-btn"
+                data-id="${item.id}"
+              >
+                Order now
+              </button>
 
+              <button
+                type="button"
+                class="add-to-order-btn"
+                data-id="${item.id}"
+              >
+                + Add to Order
+              </button>
+            </div>
           </div>
-
         </article>
       `;
     })
@@ -671,62 +673,29 @@ function displayMenuItems(menuItems) {
 
   sectionCenter.innerHTML = displayMenu;
 
-
-  // ===================================================
-  // ORDER BUTTONS
-  // ===================================================
-
-  sectionCenter
-    .querySelectorAll(".order-btn")
-    .forEach(function (button) {
-
-      button.addEventListener("click", function () {
-
-        // Find the food item that was clicked
-        const item = menu.find(function (menuItem) {
-
-          return menuItem.id === Number(button.dataset.id);
-
-        });
-
-
-        // If item doesn't exist, stop
-        if (!item) {
-          return;
-        }
-
-
-        // =================================================
-        // CREATE WHATSAPP MESSAGE
-        // =================================================
-
-        const message = encodeURIComponent(
-
-          `Hello, I would like to order:\n\n` +
-
-          `Food: ${item.title}\n` +
-
-          `Category: ${item.category}\n` +
-
-          `Price: ₦${item.price}\n` 
-        );
-
-
-        // =================================================
-        // OPEN WHATSAPP
-        // =================================================
-
-        const whatsappURL =
-          `https://wa.me/${VENDOR_WHATSAPP_NUMBER}?text=${message}`;
-
-
-        window.open(whatsappURL, "_blank");
-
+  // INDIVIDUAL WHATSAPP ORDERS
+  sectionCenter.querySelectorAll(".order-btn").forEach(function (button) {
+    button.addEventListener("click", function () {
+      const item = menu.find(function (menuItem) {
+        return Number(menuItem.id) === Number(button.dataset.id);
       });
 
-    });
+      if (!item) return;
 
+      const message =
+        `Hello Steph's Bistro! I would like to order:\n\n` +
+        `Food: ${item.title}\n` +
+        `Category: ${item.category}\n` +
+        `Price: ₦${Number(item.price).toLocaleString("en-NG")}`;
+
+      const whatsappURL =
+        `https://wa.me/${VENDOR_WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+      window.open(whatsappURL, "_blank");
+    });
+  });
 }
+
 
 
 // =====================================================
@@ -831,5 +800,184 @@ function displayMenuButtons() {
   });
 
 }
+
+
+
+
+const selectedFoods = new Map();
+
+const cartSection = document.getElementById("cart-section");
+const cartItemsContainer = document.getElementById("cart-items");
+const cartTotalElement = document.getElementById("cart-total");
+const clearCartButton = document.getElementById("clear-cart");
+const placeAllOrdersButton = document.getElementById("place-all-orders");
+
+function formatNaira(amount) {
+  return `₦${Number(amount).toLocaleString("en-NG")}`;
+}
+
+function renderCart() {
+  if (!cartSection || !cartItemsContainer) return;
+
+  cartSection.hidden = selectedFoods.size === 0;
+
+  let total = 0;
+  let cartHTML = "";
+
+  selectedFoods.forEach(function (entry, id) {
+    const item = entry.item;
+    const quantity = entry.quantity;
+    const subtotal = Number(item.price) * quantity;
+
+    total += subtotal;
+
+    cartHTML += `
+      <article class="cart-item">
+
+        <img src="${item.img}" alt="${item.title}">
+
+        <div class="cart-item-info">
+          <h4>${item.title}</h4>
+          <p>${formatNaira(item.price)} each</p>
+          <p>Subtotal: ${formatNaira(subtotal)}</p>
+
+          <div class="quantity-controls">
+            <button
+              type="button"
+              class="quantity-btn"
+              data-action="decrease"
+              data-id="${id}"
+              aria-label="Decrease quantity"
+            >−</button>
+
+            <span>${quantity}</span>
+
+            <button
+              type="button"
+              class="quantity-btn"
+              data-action="increase"
+              data-id="${id}"
+              aria-label="Increase quantity"
+            >+</button>
+          </div>
+
+          <button
+            type="button"
+            class="remove-cart-item"
+            data-id="${id}"
+          >
+            Remove
+          </button>
+        </div>
+
+      </article>
+    `;
+  });
+
+  cartItemsContainer.innerHTML = cartHTML;
+  cartTotalElement.textContent = formatNaira(total);
+}
+
+// Add a meal to the general order
+document.addEventListener("click", function (event) {
+  const addButton = event.target.closest(".add-to-order-btn");
+
+  if (addButton) {
+    const itemId = Number(addButton.dataset.id);
+
+    const item = menu.find(function (food) {
+      return Number(food.id) === itemId;
+    });
+
+    if (!item) return;
+
+    if (selectedFoods.has(itemId)) {
+      selectedFoods.get(itemId).quantity += 1;
+    } else {
+      selectedFoods.set(itemId, {
+        item: item,
+        quantity: 1
+      });
+    }
+
+    renderCart();
+    cartSection.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest"
+    });
+    return;
+  }
+
+  // Increase or decrease a meal's quantity
+  const quantityButton = event.target.closest(".quantity-btn");
+
+  if (quantityButton) {
+    const id = Number(quantityButton.dataset.id);
+    const entry = selectedFoods.get(id);
+
+    if (!entry) return;
+
+    if (quantityButton.dataset.action === "increase") {
+      entry.quantity += 1;
+    } else {
+      entry.quantity -= 1;
+
+      if (entry.quantity <= 0) {
+        selectedFoods.delete(id);
+      }
+    }
+
+    renderCart();
+    return;
+  }
+
+  // Remove a meal completely
+  const removeButton = event.target.closest(".remove-cart-item");
+
+  if (removeButton) {
+    selectedFoods.delete(Number(removeButton.dataset.id));
+    renderCart();
+  }
+});
+
+// Clear all selected meals
+clearCartButton.addEventListener("click", function () {
+  selectedFoods.clear();
+  renderCart();
+});
+
+// Send the entire order to WhatsApp
+placeAllOrdersButton.addEventListener("click", function () {
+  if (selectedFoods.size === 0) {
+    alert("Please add at least one meal to your order.");
+    return;
+  }
+
+  let total = 0;
+  let message = "Hello Steph's Bistro! I would like to place an order:\n\n";
+
+  selectedFoods.forEach(function (entry) {
+    const item = entry.item;
+    const subtotal = Number(item.price) * entry.quantity;
+
+    total += subtotal;
+
+    message +=
+      `Food: ${item.title}\n` +
+      `Quantity: ${entry.quantity}\n` +
+      `Price each: ${formatNaira(item.price)}\n` +
+      `Subtotal: ${formatNaira(subtotal)}\n` +
+      `Image: ${new URL(item.img, window.location.href).href}\n\n`;
+  });
+
+  message += `TOTAL: ${formatNaira(total)}\n\n`;
+  message += "Please confirm availability and delivery details. Thank you!";
+
+  const whatsappURL =
+    `https://wa.me/${VENDOR_WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+  window.location.href = whatsappURL;
+});
+
 
 
