@@ -965,9 +965,7 @@ placeAllOrdersButton.addEventListener("click", function () {
     message +=
       `Food: ${item.title}\n` +
       `Quantity: ${entry.quantity}\n` +
-      `Price each: ${formatNaira(item.price)}\n` +
-      `Subtotal: ${formatNaira(subtotal)}\n` +
-      `Image: ${new URL(item.img, window.location.href).href}\n\n`;
+      `Price each: ${formatNaira(item.price)}\n`;
   });
 
   message += `TOTAL: ${formatNaira(total)}\n\n`;
